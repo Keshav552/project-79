@@ -1,0 +1,564 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - Pizza Resturant Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+}
+body {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  body {
+    font-size: calc(16px + 8 * ((100vw - 320px) / 960));
+  }
+}
+@media screen and (min-width: 1280px) {
+  body {
+    font-size: 24px;
+  }
+}
+
+h1 {
+  font-size: 20px;
+}
+@media screen and (min-width: 320px) {
+  h1 {
+    font-size: calc(20px + 19 * ((100vw - 320px) / 960));
+  }
+}
+@media screen and (min-width: 1280px) {
+  h1 {
+    font-size: 39px;
+  }
+}
+
+h2 {
+  font-size: 19px;
+}
+@media screen and (min-width: 320px) {
+  h2 {
+    font-size: calc(19px + 12 * ((100vw - 320px) / 960));
+  }
+}
+@media screen and (min-width: 1280px) {
+  h2 {
+    font-size: 31px;
+  }
+}
+
+h3 {
+  font-size: 18px;
+}
+@media screen and (min-width: 320px) {
+  h3 {
+    font-size: calc(18px + 7 * ((100vw - 320px) / 960));
+  }
+}
+@media screen and (min-width: 1280px) {
+  h3 {
+    font-size: 25px;
+  }
+}
+
+a {
+  cursor: pointer;
+}
+
+section {
+  border-top: 8px solid #111;
+  flex-direction: column;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__name {
+  background: #111;
+  color: #eee;
+  padding: 5px 90px;
+}
+
+.section__title {
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+.section__title {
+  font-size: 20px;
+}
+@media screen and (min-width: 320px) {
+  .section__title {
+    font-size: calc(20px + 50 * ((100vw - 320px) / 960));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section__title {
+    font-size: 70px;
+  }
+}
+
+.section__content {
+  margin-top: 40px;
+  max-width: 70%;
+  text-align: center;
+}
+
+input, select, button {
+  background: #fff;
+  border: 3px solid #111;
+  height: 35px;
+  padding: 4px 20px;
+}
+input, select, button {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  input, select, button {
+    font-size: calc(16px + 5 * ((100vw - 320px) / 960));
+  }
+}
+@media screen and (min-width: 1280px) {
+  input, select, button {
+    font-size: 21px;
+  }
+}
+input:focus, select:focus, button:focus {
+  outline: none;
+}
+
+input[type=date] {
+  padding: 0px;
+  text-align: center;
+}
+input[type=date]::-webkit-inner-spin-button {
+  display: none;
+}
+
+select option[disabled] {
+  display: none;
+}
+
+/****************** HEADER *******************/
+.main-header {
+  background: #111;
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
+}
+
+.main-nav__item {
+  color: #eee;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.25s linear;
+}
+.main-nav__item:hover {
+  color: #aaa;
+}
+
+/****************** HEADLINE *******************/
+.headline {
+  background: url("https://www.voglioviverecosi.com/wp-content/uploads/2016/10/pizzeria-per-1920x1080.jpg") no-repeat fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+}
+
+.headline__title {
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px #eee;
+  border-bottom: solid;
+  border-top: solid;
+  color: #eee;
+  padding: 5px;
+}
+.headline__title {
+  font-size: 55px;
+}
+@media screen and (min-width: 320px) {
+  .headline__title {
+    font-size: calc(55px + 125 * ((100vw - 320px) / 960));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .headline__title {
+    font-size: 180px;
+  }
+}
+
+/****************** ABOUT *******************/
+.about__img {
+  margin-top: 40px;
+  width: 60%;
+}
+
+/****************** LOOK MENU *******************/
+.lookMenu {
+  align-items: center;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+.lookMenu::before {
+  background: url("https://previews.123rf.com/images/greenartphotography/greenartphotography1601/greenartphotography160100019/51513866-valentines-day-heart-shaped-pizza-with-pepperoni-cherry-tomatoes-mozzarella-and-parsley-on-vintage-w.jpg") no-repeat;
+  background-blend-mode: color;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.lookMenu__box {
+  border: 5px solid #eee;
+  margin-left: 100px;
+  transform: rotateZ(45deg);
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lookMenu__link {
+  border: 2px #eee;
+  border-bottom: solid;
+  border-top: solid;
+  color: #eee;
+  padding: 8px 5px;
+  text-transform: uppercase;
+  transition: padding 0.25s ease-out;
+  transform: rotateZ(-45deg);
+}
+.lookMenu__link {
+  font-size: 20px;
+}
+@media screen and (min-width: 320px) {
+  .lookMenu__link {
+    font-size: calc(20px + 4 * ((100vw - 320px) / 960));
+  }
+}
+@media screen and (min-width: 1280px) {
+  .lookMenu__link {
+    font-size: 24px;
+  }
+}
+.lookMenu__link:hover {
+  padding: 6px 20px;
+  color: #fff;
+}
+
+/****************** RESERVATION *******************/
+.reservation__form {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  width: 87%;
+}
+
+.reservation__submit {
+  background: #111;
+  color: #eee;
+  cursor: pointer;
+  border-width: 1px;
+  transition: background 0.25s linear, color 0.25s linear;
+}
+.reservation__submit:hover {
+  color: #111;
+  background: #eee;
+}
+
+/****************** EVENTS *******************/
+.event__button {
+  border-width: 1px;
+  margin-top: 30px;
+  transition: background 0.25s linear, color 0.25s linear;
+  cursor: pointer;
+}
+.event__button:hover {
+  background: #111;
+  color: #eee;
+}
+
+/****************** FOOTER *******************/
+.main-footer {
+  align-items: center;
+  background: #111;
+  color: #eee;
+  padding-bottom: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-footer__container {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 30px auto 0;
+  width: 80%;
+  height: 100%;
+}
+.main-footer__container span {
+  margin: 3px 0;
+}
+
+.main-footer__infos {
+  display: flex;
+  flex-direction: column;
+}
+.main-footer__infos div {
+  margin: 10px 0;
+}
+
+.footer__title {
+  padding-top: 30px;
+}
+
+.footer__address-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__schedule-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule__day {
+  font-weight: 700;
+}
+
+.footer__contact-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__map iframe {
+  width: 100%;
+  height: 300px;
+}
+
+@media screen and (max-width: 680px) {
+  .main-nav {
+    flex-wrap: wrap;
+    width: 80%;
+  }
+
+  .lookMenu__box {
+    width: 230px;
+    height: 230px;
+  }
+
+  .reservation__form {
+    flex-wrap: wrap;
+    width: 80%;
+  }
+  .reservation__form select {
+    margin: 10px;
+  }
+
+  .main-footer__container {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main-nav {
+    width: 95%;
+  }
+
+  .main-nav__item {
+    margin: 0.2em 0.5em;
+  }
+
+  .headline {
+    background-position-x: -100px;
+  }
+
+  .lookMenu {
+    justify-content: center;
+  }
+
+  .lookMenu__box {
+    margin-left: 0;
+    width: 220px;
+    height: 220px;
+  }
+
+  .main-footer__container {
+    flex-direction: column;
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <div class="main">
+  <header class="main-header">
+    <nav class="main-nav">
+      <a href="" class="main-nav__item">Home</a>
+      <a href="" class="main-nav__item">Reservation</a>
+      <a href="" class="main-nav__item">Location</a>
+      <a href="" class="main-nav__item">Menu</a>
+      <a href="" class="main-nav__item">Order Online</a>
+    </nav>
+  </header>
+  <div class="headline">
+    <h1 class="headline__title">Pizza Plaza</h1>
+  </div>
+  <section class="about">
+    <h3 class="section__name">Our Story</h3>
+    <h2 class="section__title">The passion for pizza</h2>
+    <img src="http://www.chefdomenicoacademy.it/tools/wp-content/uploads/2016/04/hellipizzaacademy.jpg" alt="" class="about__img">
+    <p class="section__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic distinctio accusamus dolorem, quidem odio molestiae minus ut quas porro eos dolorum temporibus veritatis pariatur eaque et. Laborum ullam repellendus necessitatibus earum repellat. Numquam dicta tempora sapiente, dolore fugit delectus, aperiam ut reprehenderit amet optio, blanditiis libero quia repellat? Perspiciatis, quis.</p>
+  </section>
+  <div class="lookMenu">
+    <div class="lookMenu__box">
+      <a class='lookMenu__link'>Look Our Menu</a>
+    </div>
+  </div>
+  <section class="reservation">
+    <h3 class="section__name">Reservations</h3>
+    <h2 class="section__title">Make a reservation</h2>
+    <form class="reservation__form">
+      <input type='date' name="date" id="date">
+      <select name="time" id="time">
+        <option value="" disabled selected>Time</option>
+        <option value="12.00">12.00</option>
+        <option value="12.30">12.30</option>
+        <option value="13.00">13.00</option>
+        <option value="13.30">13.30</option>
+        <option value="14.00">14.00</option>
+        <option value="14.30">14.30</option>
+        <option value="15.00">15.00</option>
+        <option value="15.30">15.30</option>
+        <option value="16.00">16.00</option>
+        <option value="16.30">16.30</option>
+        <option value="17.00">17.00</option>
+        <option value="17.30">17.30</option>
+        <option value="18.00">18.00</option>
+        <option value="18.30">18.30</option>
+        <option value="19.00">19.00</option>
+        <option value="19.30">19.30</option>
+        <option value="20.00">20.00</option>
+        <option value="20.30">20.30</option>
+        <option value="21.00">21.00</option>
+        <option value="21.30">21.30</option>
+        <option value="22.00">22.00</option>
+      </select>
+      <select name="seat" id="seat">
+        <option value="" disabled selected>Party Size</option>
+        <option value="1"> 1 person</option>
+        <option value="2"> 2 people</option>
+        <option value="3"> 3 people</option>
+        <option value="4"> 4 people</option>
+        <option value="5"> 5 people</option>
+        <option value="6"> 6 people</option>
+      </select>
+      <button class="reservation__submit" type='submit'>Book Now</button>      
+    </form>
+  </section>
+  <section class="events">
+    <h3 class="section__name">Private Events</h3>
+    <h2 class="section__title">Pizza parties are fun</h2>
+    <p class="section__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quia repellendus, fugiat minus vel velit nam molestiae quaerat voluptates nulla aspernatur? Laudantium optio eveniet quaerat deserunt animi officia quis rerum eum dolorum, ducimus provident quisquam quae dolores laboriosam unde esse at veniam eius reiciendis iste minima impedit natus. Quaerat, quod!</p>
+    <button class="event__button">Contact Us</button>
+  </section>
+
+  <footer class="main-footer">
+    <h1 class="footer__title">Come Grab A Silce</h1>
+    <div class="main-footer__container">
+      <div class="main-footer__infos">
+        <div class="footer__address-container">
+          <span class="address__street">121b Baker Street</span>
+          <span class="address__city">London</span>
+        </div>
+        <div class="footer__schedule-container">
+          <span class="schedule__day">Tuesday-Friday</span>
+          <span class="schedule__hour">07:00 – 22:00</span>
+          <span class="schedule__day">Saturday</span>
+          <span class="schedule__hour">09:00 – 00:00</span>
+          <span class="schedule__day">Sunday</span>
+          <span class="schedule__hour">08:00 – 23:00</span>
+        </div>
+        <div class="footer__contact-container">
+          <span class="contact__phone">Tel: 555-879-554</span>
+          <span class="contact__email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b2c2dbc8c8d3f2c2dbc8c8d39cd1dddf">[email&#160;protected]</a></span>
+        </div>
+      </div>
+      <div class="footer__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.5394834092376!2d-0.1597611848427044!3d51.521664217482055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761acec0d50469%3A0x55bc36900b327d2!2s119-121+Baker+St%2C+Marylebone%2C+London+W1U+6RY%2C+Regno+Unito!5e0!3m2!1sit!2sit!4v1526848033898" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </footer>
+</div>
+  
+  
+  
+  
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+
+</html>
+ 
